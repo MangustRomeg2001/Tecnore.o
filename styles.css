@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+.pokedex {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 5px solid #3498db;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pokedex h2 {
+    font-size: 20px;
+    color: #3498db;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 12px;
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#searchButton {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.result {
+    border: 2px solid #3498db;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+#pokemonInfo {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#pokemonImage img {
+    max-width: 100%;
+    max-height: 300px; /* Cambia la altura máxima a 300px o el valor que desees */
+    height: auto;
+    border: 4px solid #3498db;
+    border-radius: 20px;
+}
+
+#pokemonImage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pokemonImage img {
+    max-width: 100px; /* Ajusta el tamaño de la Poké Ball según tus preferencias */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
