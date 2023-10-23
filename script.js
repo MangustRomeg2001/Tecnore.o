@@ -28,6 +28,33 @@ searchButton.addEventListener("click", () => {
 });
 
 
+// Obtener el botón "Guardar"
+const saveButton = document.getElementById("saveButton");
+
+// Función para guardar un Pokémon en el almacenamiento local
+saveButton.addEventListener("click", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    if (searchTerm) {
+        let savedPokemon = JSON.parse(localStorage.getItem("savedPokemon")) || [];
+        savedPokemon.push(searchTerm);
+        localStorage.setItem("savedPokemon", JSON.stringify(savedPokemon));
+        alert(`El Pokémon "${searchTerm}" ha sido guardado.`);
+    }
+});
+
+// Función para mostrar los Pokémon guardados
+const showSavedPokemon = () => {
+    const savedPokemon = JSON.parse(localStorage.getItem("savedPokemon")) || [];
+    if (savedPokemon.length > 0) {
+        const savedPokemonList = savedPokemon.map(pokemon => `<li>${pokemon}</li>`).join("");
+        document.getElementById("savedPokemonList").innerHTML = `<ul>${savedPokemonList}</ul>`;
+    }
+};
+
+showSavedPokemon();
+
+
+
 const weatherInfo = document.getElementById("weatherInfo");
 
 searchButton.addEventListener("click", () => {
